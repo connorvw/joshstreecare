@@ -1,0 +1,4 @@
+# Josh's Lawn Care — Redirects
+# Format: [old path]  [new path]  [status]
+
+https://www.joshslawncare.com/*  https://joshslawncare.com/:splat  301
