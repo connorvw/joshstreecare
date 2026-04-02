@@ -3,24 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lawn Care in Nashville, TN | Josh's Lawn Care</title>
-  <meta name="description" content="Josh's Lawn Care provides professional mowing, fertilization, weed control, and seasonal cleanup in Nashville, TN. Call (615) 555-0100 for a free quote.">
-  <link rel="canonical" href="https://joshslawncare.com/">
+  <title>Tree Service in Nashville, TN | Josh's Tree Care</title>
+  <meta name="description" content="Josh's Tree Care provides professional tree removal, trimming, stump grinding, and emergency tree service in Nashville, TN. Call (615) 555-0100 for a free quote.">
+  <link rel="canonical" href="https://joshstreecare.com/">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Lawn Care in Nashville, TN | Josh's Lawn Care">
-  <meta property="og:description" content="Professional lawn care services in Nashville, TN. Mowing, fertilization, weed control, aeration, and more.">
-  <meta property="og:url" content="https://joshslawncare.com/">
+  <meta property="og:title" content="Tree Service in Nashville, TN | Josh's Tree Care">
+  <meta property="og:description" content="Professional tree removal, trimming, stump grinding, and storm damage cleanup in Nashville, TN.">
+  <meta property="og:url" content="https://joshstreecare.com/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1542621334-a254cf47733d?w=1200">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* ============================
-       CSS CUSTOM PROPERTIES
-    ============================ */
     :root {
       --primary:     #1B5E20;
       --primary-mid: #2E7D32;
@@ -38,1052 +35,229 @@
       --shadow:      0 4px 20px rgba(0,0,0,0.10);
       --shadow-lg:   0 8px 40px rgba(0,0,0,0.15);
     }
-
-    /* ============================
-       RESET & BASE
-    ============================ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: var(--font-body);
-      font-size: 1rem;
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.6;
-    }
+    body { font-family: var(--font-body); font-size: 1rem; color: var(--text); background: var(--white); line-height: 1.6; }
     img { max-width: 100%; display: block; }
     a { color: inherit; text-decoration: none; }
+    h1, h2, h3, h4 { font-family: var(--font-title); line-height: 1.15; font-weight: 700; }
 
-    h1, h2, h3, h4 {
-      font-family: var(--font-title);
-      line-height: 1.15;
-      font-weight: 700;
-    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section-pad { padding: 80px 0; }
+    .section-pad-sm { padding: 56px 0; }
+    .tag { display: inline-block; font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .section-title { font-size: clamp(2rem, 4vw, 2.8rem); color: var(--text); margin-bottom: 16px; }
+    .section-subtitle { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; }
+    .section-header { margin-bottom: 48px; }
+    .section-header.center { text-align: center; }
+    .section-header.center .section-subtitle { margin: 0 auto; }
 
-    /* ============================
-       UTILITY
-    ============================ */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    .section-pad {
-      padding: 80px 0;
-    }
-    .section-pad-sm {
-      padding: 56px 0;
-    }
-    .tag {
-      display: inline-block;
-      font-family: var(--font-body);
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 12px;
-    }
-    .section-title {
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      color: var(--text);
-      margin-bottom: 16px;
-    }
-    .section-subtitle {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      max-width: 600px;
-    }
-    .section-header {
-      margin-bottom: 48px;
-    }
-    .section-header.center {
-      text-align: center;
-    }
-    .section-header.center .section-subtitle {
-      margin: 0 auto;
-    }
+    .btn { display: inline-block; font-family: var(--font-body); font-size: 1rem; font-weight: 700; padding: 14px 28px; border-radius: var(--radius-sm); cursor: pointer; border: none; transition: transform 0.2s ease, box-shadow 0.2s ease; text-align: center; min-height: 48px; }
+    .btn:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .btn-primary { background: var(--accent); color: var(--white); }
+    .btn-primary:hover { background: #689F38; }
+    .btn-outline { background: transparent; color: var(--white); border: 2px solid var(--white); }
+    .btn-outline:hover { background: var(--white); color: var(--primary); }
+    .btn-dark { background: var(--primary); color: var(--white); }
+    .btn-dark:hover { background: var(--primary-mid); }
 
-    /* ============================
-       BUTTONS
-    ============================ */
-    .btn {
-      display: inline-block;
-      font-family: var(--font-body);
-      font-size: 1rem;
-      font-weight: 700;
-      padding: 14px 28px;
-      border-radius: var(--radius-sm);
-      cursor: pointer;
-      border: none;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      text-align: center;
-      min-height: 48px;
-    }
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-lg);
-    }
-    .btn-primary {
-      background: var(--accent);
-      color: var(--white);
-    }
-    .btn-primary:hover {
-      background: #689F38;
-    }
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border: 2px solid var(--white);
-    }
-    .btn-outline:hover {
-      background: var(--white);
-      color: var(--primary);
-    }
-    .btn-dark {
-      background: var(--primary);
-      color: var(--white);
-    }
-    .btn-dark:hover {
-      background: var(--primary-mid);
-    }
+    /* NAVBAR */
+    .navbar { position: sticky; top: 0; z-index: 900; background: var(--white); border-bottom: 3px solid var(--accent); box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+    .navbar-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; max-width: 1440px; margin: 0 auto; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-logo-icon { width: 42px; height: 42px; background: var(--primary); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .nav-logo-icon svg { width: 26px; height: 26px; fill: var(--white); }
+    .nav-logo-text { font-family: var(--font-title); font-size: 1.3rem; color: var(--primary); line-height: 1.1; }
+    .nav-logo-text span { display: block; font-family: var(--font-body); font-size: 0.9rem; font-weight: 400; color: var(--text-muted); }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; color: var(--text); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-cta { display: flex; align-items: center; gap: 16px; }
+    .nav-phone { font-family: var(--font-body); font-size: 1rem; font-weight: 700; color: var(--primary); }
+    .nav-phone:hover { color: var(--accent); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; }
+    .mobile-menu { display: none; flex-direction: column; background: var(--white); border-top: 1px solid var(--border); padding: 16px 24px 24px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-size: 1rem; font-weight: 600; color: var(--text); padding: 12px 0; border-bottom: 1px solid var(--border); }
+    .mobile-menu .btn { margin-top: 16px; width: 100%; }
 
-    /* ============================
-       NAVBAR
-    ============================ */
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 900;
-      background: var(--white);
-      border-bottom: 3px solid var(--accent);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    }
-    .navbar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 24px;
-      max-width: 1440px;
-      margin: 0 auto;
-    }
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-    .nav-logo-icon {
-      width: 42px;
-      height: 42px;
-      background: var(--primary);
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .nav-logo-icon svg {
-      width: 26px;
-      height: 26px;
-      fill: var(--white);
-    }
-    .nav-logo-text {
-      font-family: var(--font-title);
-      font-size: 1.3rem;
-      color: var(--primary);
-      line-height: 1.1;
-    }
-    .nav-logo-text span {
-      display: block;
-      font-family: var(--font-body);
-      font-size: 0.9rem;
-      font-weight: 400;
-      color: var(--text-muted);
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      list-style: none;
-    }
-    .nav-links a {
-      font-family: var(--font-body);
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--text);
-      transition: color 0.2s;
-    }
-    .nav-links a:hover {
-      color: var(--primary);
-    }
-    .nav-cta {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .nav-phone {
-      font-family: var(--font-body);
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--primary);
-      text-decoration: none;
-    }
-    .nav-phone:hover {
-      color: var(--accent);
-    }
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 4px;
-    }
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--text);
-      border-radius: 2px;
-      transition: all 0.3s;
-    }
-    .mobile-menu {
-      display: none;
-      flex-direction: column;
-      background: var(--white);
-      border-top: 1px solid var(--border);
-      padding: 16px 24px 24px;
-    }
-    .mobile-menu.open {
-      display: flex;
-    }
-    .mobile-menu a {
-      font-family: var(--font-body);
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--text);
-      padding: 12px 0;
-      border-bottom: 1px solid var(--border);
-      text-decoration: none;
-    }
-    .mobile-menu .btn {
-      margin-top: 16px;
-      width: 100%;
-    }
-
-    /* ============================
-       HERO — VARIANT 3
-       Text+Form left 55% | Image right 45%
-    ============================ */
-    .hero {
-      display: grid;
-      grid-template-columns: 55% 45%;
-      min-height: 580px;
-    }
-    .hero-content {
-      background: var(--primary);
-      padding: 72px 56px 72px 48px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .hero-tag {
-      display: inline-block;
-      background: rgba(255,255,255,0.15);
-      color: var(--accent-light);
-      font-family: var(--font-body);
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 6px 14px;
-      border-radius: var(--radius-sm);
-      margin-bottom: 20px;
-    }
-    .hero h1 {
-      font-size: clamp(2.2rem, 4vw, 3.4rem);
-      color: var(--white);
-      margin-bottom: 16px;
-      line-height: 1.1;
-    }
+    /* HERO */
+    .hero { display: grid; grid-template-columns: 55% 45%; min-height: 580px; }
+    .hero-content { background: var(--primary); padding: 72px 56px 72px 48px; display: flex; flex-direction: column; justify-content: center; }
+    .hero-tag { display: inline-block; background: rgba(255,255,255,0.15); color: var(--accent-light); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 14px; border-radius: var(--radius-sm); margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(2.2rem, 4vw, 3.4rem); color: var(--white); margin-bottom: 16px; line-height: 1.1; }
     .hero h1 .accent { color: var(--accent-light); }
-    .hero-subtitle {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,0.85);
-      margin-bottom: 32px;
-      max-width: 480px;
-    }
-    .hero-phone {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-body);
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--accent-light);
-      text-decoration: none;
-      margin-bottom: 28px;
-    }
+    .hero-subtitle { font-size: 1.1rem; color: rgba(255,255,255,0.85); margin-bottom: 32px; max-width: 480px; }
+    .hero-phone { display: inline-flex; align-items: center; gap: 8px; font-size: 1.3rem; font-weight: 700; color: var(--accent-light); margin-bottom: 28px; }
     .hero-phone svg { width: 20px; height: 20px; fill: var(--accent-light); }
-    .hero-form {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: var(--radius-md);
-      padding: 24px;
-      backdrop-filter: blur(4px);
-    }
-    .hero-form h3 {
-      font-family: var(--font-title);
-      font-size: 1.2rem;
-      color: var(--white);
-      margin-bottom: 16px;
-    }
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
+    .hero-form { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-md); padding: 24px; backdrop-filter: blur(4px); }
+    .hero-form h3 { font-size: 1.2rem; color: var(--white); margin-bottom: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
     .form-row.single { grid-template-columns: 1fr; }
-    .form-input {
-      width: 100%;
-      height: 48px;
-      padding: 0 14px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.25);
-      border-radius: var(--radius-sm);
-      color: var(--white);
-      font-family: var(--font-body);
-      font-size: 0.95rem;
-      outline: none;
-      transition: border-color 0.2s;
-    }
+    .form-input { width: 100%; height: 48px; padding: 0 14px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: var(--radius-sm); color: var(--white); font-family: var(--font-body); font-size: 0.95rem; outline: none; }
     .form-input::placeholder { color: rgba(255,255,255,0.55); }
     .form-input:focus { border-color: var(--accent-light); background: rgba(255,255,255,0.18); }
-    .form-select {
-      width: 100%;
-      height: 48px;
-      padding: 0 14px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.25);
-      border-radius: var(--radius-sm);
-      color: var(--white);
-      font-family: var(--font-body);
-      font-size: 0.95rem;
-      outline: none;
-      cursor: pointer;
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M0 0l6 8 6-8z' fill='%23AED581'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 14px center;
-    }
+    .form-select { width: 100%; height: 48px; padding: 0 14px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: var(--radius-sm); color: var(--white); font-family: var(--font-body); font-size: 0.95rem; outline: none; cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M0 0l6 8 6-8z' fill='%23AED581'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
     .form-select option { background: var(--primary); }
     .hero-form .btn { width: 100%; margin-top: 12px; font-size: 1.05rem; padding: 16px; }
-    .hero-image {
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-    .hero-image-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to right, rgba(27,94,32,0.3), transparent);
-    }
-    .trust-bar {
-      background: var(--bg-light);
-      border-top: 3px solid var(--accent);
-      padding: 16px 0;
-    }
-    .trust-bar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 32px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-body);
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--primary);
-    }
+    .hero-image { position: relative; overflow: hidden; }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-image-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(27,94,32,0.3), transparent); }
+
+    /* TRUST BAR */
+    .trust-bar { background: var(--bg-light); border-top: 3px solid var(--accent); padding: 16px 0; }
+    .trust-bar-inner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 32px; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.95rem; font-weight: 600; color: var(--primary); }
     .trust-item svg { width: 20px; height: 20px; fill: var(--accent); flex-shrink: 0; }
 
-    /* ============================
-       SERVICES — VARIANT 1
-       3-col grid, icon top, title, text, arrow link
-    ============================ */
+    /* SERVICES */
     .services-section { background: var(--white); }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-    .service-card {
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 32px 28px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      cursor: pointer;
-    }
-    .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--accent);
-    }
-    .service-icon {
-      width: 64px;
-      height: 64px;
-      background: var(--bg-light);
-      border-radius: var(--radius-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .service-card { border: 1px solid var(--border); border-radius: var(--radius-md); padding: 32px 28px; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+    .service-icon { width: 64px; height: 64px; background: var(--bg-light); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
     .service-icon svg { width: 36px; height: 36px; }
-    .service-card h3 {
-      font-family: var(--font-title);
-      font-size: 1.25rem;
-      color: var(--primary);
-      margin-bottom: 10px;
-    }
-    .service-card p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-bottom: 18px;
-      line-height: 1.6;
-    }
-    .service-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--accent);
-      text-decoration: none;
-      transition: gap 0.2s;
-    }
+    .service-card h3 { font-size: 1.25rem; color: var(--primary); margin-bottom: 10px; }
+    .service-card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 18px; line-height: 1.6; }
+    .service-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.95rem; font-weight: 700; color: var(--accent); transition: gap 0.2s; }
     .service-link:hover { gap: 10px; }
     .service-link svg { width: 16px; height: 16px; }
 
-    /* ============================
-       SERVICE ESTIMATOR QUIZ — INTERACTIVE #2
-       Texture background, dark overlay
-    ============================ */
-    .quiz-section {
-      background:
-        linear-gradient(rgba(27,94,32,0.88), rgba(27,94,32,0.88)),
-        url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1400&q=80') center/cover;
-    }
-    .quiz-wrapper {
-      max-width: 760px;
-      margin: 0 auto;
-      text-align: center;
-    }
+    /* QUIZ */
+    .quiz-section { background: linear-gradient(rgba(27,94,32,0.88), rgba(27,94,32,0.88)), url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1400&q=80') center/cover; }
+    .quiz-wrapper { max-width: 760px; margin: 0 auto; text-align: center; }
     .quiz-wrapper .tag { color: var(--accent-light); }
     .quiz-wrapper .section-title { color: var(--white); margin-bottom: 8px; }
     .quiz-wrapper .section-subtitle { color: rgba(255,255,255,0.8); margin: 0 auto 36px; }
-    .quiz-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: var(--radius-md);
-      padding: 36px 40px;
-      backdrop-filter: blur(6px);
-    }
+    .quiz-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-md); padding: 36px 40px; backdrop-filter: blur(6px); }
     .quiz-step { display: none; }
     .quiz-step.active { display: block; }
-    .quiz-question {
-      font-family: var(--font-title);
-      font-size: 1.4rem;
-      color: var(--white);
-      margin-bottom: 24px;
-    }
-    .quiz-options {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-    .quiz-option {
-      padding: 14px 18px;
-      border: 2px solid rgba(255,255,255,0.3);
-      border-radius: var(--radius-sm);
-      background: transparent;
-      color: var(--white);
-      font-family: var(--font-body);
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-      text-align: center;
-    }
-    .quiz-option:hover,
-    .quiz-option.selected {
-      background: var(--accent);
-      border-color: var(--accent);
-      transform: translateY(-2px);
-    }
-    .quiz-progress {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    .quiz-dot {
-      width: 10px; height: 10px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.3);
-      transition: background 0.3s;
-    }
+    .quiz-question { font-family: var(--font-title); font-size: 1.4rem; color: var(--white); margin-bottom: 24px; }
+    .quiz-options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+    .quiz-option { padding: 14px 18px; border: 2px solid rgba(255,255,255,0.3); border-radius: var(--radius-sm); background: transparent; color: var(--white); font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.2s; text-align: center; }
+    .quiz-option:hover, .quiz-option.selected { background: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
+    .quiz-progress { display: flex; align-items: center; gap: 8px; justify-content: center; margin-bottom: 20px; }
+    .quiz-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.3); transition: background 0.3s; }
     .quiz-dot.active { background: var(--accent-light); }
-    .quiz-result {
-      display: none;
-      text-align: center;
-    }
+    .quiz-result { display: none; text-align: center; }
     .quiz-result.show { display: block; }
-    .quiz-result-icon {
-      width: 72px; height: 72px;
-      background: var(--accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-    }
+    .quiz-result-icon { width: 72px; height: 72px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
     .quiz-result-icon svg { width: 40px; height: 40px; fill: white; }
-    .quiz-result h3 {
-      font-family: var(--font-title);
-      font-size: 1.6rem;
-      color: var(--white);
-      margin-bottom: 10px;
-    }
-    .quiz-result p {
-      color: rgba(255,255,255,0.85);
-      font-size: 1rem;
-      margin-bottom: 24px;
-    }
-    .quiz-restart {
-      background: none;
-      border: none;
-      color: rgba(255,255,255,0.6);
-      font-family: var(--font-body);
-      font-size: 0.9rem;
-      cursor: pointer;
-      text-decoration: underline;
-      margin-top: 12px;
-    }
+    .quiz-result h3 { font-family: var(--font-title); font-size: 1.6rem; color: var(--white); margin-bottom: 10px; }
+    .quiz-result p { color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 24px; }
+    .quiz-restart { background: none; border: none; color: rgba(255,255,255,0.6); font-family: var(--font-body); font-size: 0.9rem; cursor: pointer; text-decoration: underline; margin-top: 12px; }
 
-    /* ============================
-       WHY CHOOSE US — Animated Counters INTERACTIVE #1
-    ============================ */
+    /* TRUST STATS */
     .trust-section { background: var(--white); }
-    .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      margin-top: 48px;
-    }
-    .trust-stat {
-      text-align: center;
-      padding: 32px 20px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .trust-stat:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-    }
-    .trust-stat-icon {
-      width: 56px; height: 56px;
-      background: var(--bg-light);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 16px;
-    }
+    .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
+    .trust-stat { text-align: center; padding: 32px 20px; border: 1px solid var(--border); border-radius: var(--radius-md); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .trust-stat:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .trust-stat-icon { width: 56px; height: 56px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
     .trust-stat-icon svg { width: 28px; height: 28px; fill: var(--primary); }
-    .counter {
-      font-family: var(--font-title);
-      font-size: 2.8rem;
-      color: var(--primary);
-      line-height: 1;
-      display: block;
-    }
-    .trust-stat-suffix {
-      font-family: var(--font-title);
-      font-size: 1.8rem;
-      color: var(--accent);
-    }
-    .trust-stat-label {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-top: 8px;
-      font-weight: 600;
-    }
-    .trust-checklist {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-top: 48px;
-    }
-    .trust-check {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-    }
-    .check-icon {
-      width: 24px; height: 24px;
-      background: var(--accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
+    .counter { font-family: var(--font-title); font-size: 2.8rem; color: var(--primary); line-height: 1; display: block; }
+    .trust-stat-label { font-size: 0.95rem; color: var(--text-muted); margin-top: 8px; font-weight: 600; }
+    .trust-checklist { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 48px; }
+    .trust-check { display: flex; align-items: flex-start; gap: 12px; }
+    .check-icon { width: 24px; height: 24px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
     .check-icon svg { width: 14px; height: 14px; fill: white; }
     .trust-check p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.5; }
     .trust-check p strong { color: var(--text); font-weight: 700; }
 
-    /* ============================
-       REVIEWS — VARIANT 1, Texture bg
-    ============================ */
-    .reviews-section {
-      background:
-        linear-gradient(rgba(46,125,50,0.92), rgba(46,125,50,0.92)),
-        url('https://images.unsplash.com/photo-1500651230702-0e2d8a49d4e8?w=1400&q=80') center/cover fixed;
-    }
+    /* REVIEWS */
+    .reviews-section { background: linear-gradient(rgba(46,125,50,0.92), rgba(46,125,50,0.92)), url('https://images.unsplash.com/photo-1500651230702-0e2d8a49d4e8?w=1400&q=80') center/cover fixed; }
     .reviews-section .section-title { color: var(--white); }
     .reviews-section .tag { color: var(--accent-light); }
     .reviews-section .section-subtitle { color: rgba(255,255,255,0.8); }
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-    .review-card {
-      background: rgba(255,255,255,0.10);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: var(--radius-md);
-      padding: 28px;
-      backdrop-filter: blur(6px);
-      transition: transform 0.2s ease;
-    }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .review-card { background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-md); padding: 28px; backdrop-filter: blur(6px); transition: transform 0.2s ease; }
     .review-card:hover { transform: translateY(-4px); }
-    .review-stars {
-      display: flex;
-      gap: 4px;
-      margin-bottom: 14px;
-    }
+    .review-stars { display: flex; gap: 4px; margin-bottom: 14px; }
     .review-stars svg { width: 18px; height: 18px; fill: #FFD600; }
-    .review-text {
-      font-size: 0.95rem;
-      color: rgba(255,255,255,0.9);
-      line-height: 1.7;
-      margin-bottom: 20px;
-      font-style: italic;
-    }
-    .review-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .review-avatar {
-      width: 42px; height: 42px;
-      background: var(--accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-title);
-      font-size: 1.1rem;
-      color: var(--white);
-      flex-shrink: 0;
-    }
-    .review-name {
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--white);
-    }
-    .review-date {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.6);
-    }
-    .reviews-cta {
-      text-align: center;
-      margin-top: 40px;
-    }
+    .review-text { font-size: 0.95rem; color: rgba(255,255,255,0.9); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+    .review-author { display: flex; align-items: center; gap: 12px; }
+    .review-avatar { width: 42px; height: 42px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-title); font-size: 1.1rem; color: var(--white); flex-shrink: 0; }
+    .review-name { font-weight: 700; font-size: 0.95rem; color: var(--white); }
+    .review-date { font-size: 0.9rem; color: rgba(255,255,255,0.6); }
+    .reviews-cta { text-align: center; margin-top: 40px; }
 
-    /* ============================
-       SERVICE AREA
-    ============================ */
+    /* SERVICE AREA */
     .area-section { background: var(--bg-light); }
-    .area-section .section-title { color: var(--text); }
-    .area-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 56px;
-      align-items: start;
-    }
-    .area-text p {
-      font-size: 1rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-    .area-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .area-pill {
-      padding: 8px 16px;
-      background: var(--white);
-      border: 2px solid var(--border);
-      border-radius: 999px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--primary);
-      transition: all 0.2s;
-    }
-    .area-pill:hover {
-      background: var(--primary);
-      border-color: var(--primary);
-      color: var(--white);
-      transform: translateY(-2px);
-    }
+    .area-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    .area-text p { font-size: 1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; }
+    .area-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .area-pill { padding: 8px 16px; background: var(--white); border: 2px solid var(--border); border-radius: 999px; font-size: 0.95rem; font-weight: 600; color: var(--primary); transition: all 0.2s; }
+    .area-pill:hover { background: var(--primary); border-color: var(--primary); color: var(--white); transform: translateY(-2px); }
 
-    /* ============================
-       FAQ — Animated Accordion INTERACTIVE #3
-    ============================ */
-    .faq-section {
-      background:
-        linear-gradient(rgba(27,94,32,0.85), rgba(27,94,32,0.85)),
-        url('https://images.unsplash.com/photo-1590682680695-43b964a3ae17?w=1400&q=80') center/cover;
-    }
+    /* FAQ */
+    .faq-section { background: linear-gradient(rgba(27,94,32,0.85), rgba(27,94,32,0.85)), url('https://images.unsplash.com/photo-1542621334-a254cf47733d?w=1400&q=80') center/cover; }
     .faq-section .section-title { color: var(--white); }
     .faq-section .tag { color: var(--accent-light); }
     .faq-section .section-subtitle { color: rgba(255,255,255,0.8); }
-    .faq-list {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .faq-item {
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: var(--radius-sm);
-      margin-bottom: 12px;
-      overflow: hidden;
-    }
-    .faq-question {
-      width: 100%;
-      background: rgba(255,255,255,0.08);
-      border: none;
-      padding: 20px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      cursor: pointer;
-      text-align: left;
-      transition: background 0.2s;
-    }
+    .faq-list { max-width: 800px; margin: 0 auto; }
+    .faq-item { border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-sm); margin-bottom: 12px; overflow: hidden; }
+    .faq-question { width: 100%; background: rgba(255,255,255,0.08); border: none; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left; transition: background 0.2s; }
     .faq-question:hover { background: rgba(255,255,255,0.14); }
-    .faq-question span {
-      font-family: var(--font-title);
-      font-size: 1.05rem;
-      color: var(--white);
-      flex: 1;
-      padding-right: 16px;
-    }
-    .faq-icon {
-      width: 28px; height: 28px;
-      background: var(--accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      transition: transform 0.3s ease;
-    }
+    .faq-question span { font-family: var(--font-title); font-size: 1.05rem; color: var(--white); flex: 1; padding-right: 16px; }
+    .faq-icon { width: 28px; height: 28px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: transform 0.3s ease; }
     .faq-icon svg { width: 14px; height: 14px; fill: white; }
     .faq-item.open .faq-icon { transform: rotate(45deg); }
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease, padding 0.3s ease;
-      background: rgba(255,255,255,0.04);
-    }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; background: rgba(255,255,255,0.04); }
     .faq-item.open .faq-answer { max-height: 400px; }
-    .faq-answer-inner {
-      padding: 0 24px 20px;
-      font-size: 0.95rem;
-      color: rgba(255,255,255,0.85);
-      line-height: 1.7;
-    }
+    .faq-answer-inner { padding: 0 24px 20px; font-size: 0.95rem; color: rgba(255,255,255,0.85); line-height: 1.7; }
 
-    /* ============================
-       CTA SECTION
-    ============================ */
+    /* CTA */
     .cta-section { background: var(--accent); }
-    .cta-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 32px;
-    }
-    .cta-text h2 {
-      font-size: clamp(1.8rem, 3vw, 2.4rem);
-      color: var(--white);
-      margin-bottom: 8px;
-    }
-    .cta-text p {
-      font-size: 1rem;
-      color: rgba(255,255,255,0.9);
-    }
-    .cta-actions {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      flex-shrink: 0;
-    }
-    .cta-phone {
-      font-family: var(--font-title);
-      font-size: 1.4rem;
-      color: var(--white);
-      text-decoration: none;
-    }
+    .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+    .cta-text h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--white); margin-bottom: 8px; }
+    .cta-text p { font-size: 1rem; color: rgba(255,255,255,0.9); }
+    .cta-actions { display: flex; align-items: center; gap: 20px; flex-shrink: 0; }
+    .cta-phone { font-family: var(--font-title); font-size: 1.4rem; color: var(--white); }
     .cta-phone:hover { opacity: 0.85; }
 
-    /* ============================
-       FOOTER
-    ============================ */
-    .footer {
-      background: #0f3312;
-      color: rgba(255,255,255,0.75);
-      padding: 64px 0 0;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 48px;
-      margin-bottom: 48px;
-    }
-    .footer-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-    .footer-logo-icon {
-      width: 38px; height: 38px;
-      background: var(--accent);
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    /* FOOTER */
+    .footer { background: #0f3312; color: rgba(255,255,255,0.75); padding: 64px 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+    .footer-logo-icon { width: 38px; height: 38px; background: var(--accent); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; }
     .footer-logo-icon svg { width: 22px; height: 22px; fill: white; }
-    .footer-logo-text {
-      font-family: var(--font-title);
-      font-size: 1.2rem;
-      color: var(--white);
-    }
-    .footer-desc {
-      font-size: 0.95rem;
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-    .footer-contact a {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.95rem;
-      color: var(--accent-light);
-      text-decoration: none;
-      margin-bottom: 8px;
-      font-weight: 600;
-    }
+    .footer-logo-text { font-family: var(--font-title); font-size: 1.2rem; color: var(--white); }
+    .footer-desc { font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px; }
+    .footer-contact a { display: flex; align-items: center; gap: 8px; font-size: 0.95rem; color: var(--accent-light); margin-bottom: 8px; font-weight: 600; }
     .footer-contact a svg { width: 16px; height: 16px; fill: var(--accent); }
-    .footer h4 {
-      font-family: var(--font-title);
-      font-size: 1rem;
-      color: var(--white);
-      margin-bottom: 16px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-    .footer-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .footer-links a {
-      font-size: 0.95rem;
-      color: rgba(255,255,255,0.7);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+    .footer h4 { font-family: var(--font-title); font-size: 1rem; color: var(--white); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 0.95rem; color: rgba(255,255,255,0.7); transition: color 0.2s; }
     .footer-links a:hover { color: var(--accent-light); }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding: 20px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.45);
-    }
-    .footer-bottom a { color: rgba(255,255,255,0.45); text-decoration: none; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding: 20px 0; display: flex; align-items: center; justify-content: space-between; font-size: 0.9rem; color: rgba(255,255,255,0.45); }
+    .footer-bottom a { color: rgba(255,255,255,0.45); }
     .footer-bottom a:hover { color: var(--accent-light); }
 
-    /* ============================
-       QUOTE MODAL
-    ============================ */
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.6);
-      z-index: 9000;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-    }
-    .modal-overlay.open {
-      display: flex;
-    }
-    .modal {
-      background: var(--white);
-      border-radius: var(--radius-md);
-      max-width: 480px;
-      width: 100%;
-      box-shadow: var(--shadow-lg);
-      overflow: hidden;
-      animation: modalIn 0.3s ease;
-    }
-    @keyframes modalIn {
-      from { transform: translateY(-20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-    .modal-header {
-      background: var(--primary);
-      padding: 20px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .modal-header h3 {
-      font-family: var(--font-title);
-      font-size: 1.2rem;
-      color: var(--white);
-    }
-    .modal-close {
-      background: rgba(255,255,255,0.15);
-      border: none;
-      width: 32px; height: 32px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      font-size: 1.2rem;
-      line-height: 1;
-      transition: background 0.2s;
-    }
+    /* MODAL */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 9000; display: none; align-items: center; justify-content: center; padding: 24px; }
+    .modal-overlay.open { display: flex; }
+    .modal { background: var(--white); border-radius: var(--radius-md); max-width: 480px; width: 100%; box-shadow: var(--shadow-lg); overflow: hidden; animation: modalIn 0.3s ease; }
+    @keyframes modalIn { from { transform: translateY(-20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    .modal-header { background: var(--primary); padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .modal-header h3 { font-family: var(--font-title); font-size: 1.2rem; color: var(--white); }
+    .modal-close { background: rgba(255,255,255,0.15); border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.2rem; transition: background 0.2s; }
     .modal-close:hover { background: rgba(255,255,255,0.3); }
     .modal-body { padding: 28px 24px; }
     .modal-field { margin-bottom: 14px; }
-    .modal-field label {
-      display: block;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 6px;
-    }
-    .modal-field input,
-    .modal-field select,
-    .modal-field textarea {
-      width: 100%;
-      padding: 12px 14px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      font-family: var(--font-body);
-      font-size: 0.95rem;
-      color: var(--text);
-      outline: none;
-      transition: border-color 0.2s;
-      background: var(--white);
-    }
-    .modal-field input:focus,
-    .modal-field select:focus,
-    .modal-field textarea:focus {
-      border-color: var(--primary);
-    }
-    .modal-field textarea {
-      height: 90px;
-      resize: vertical;
-    }
-    .modal-submit {
-      width: 100%;
-      padding: 16px;
-      background: var(--accent);
-      color: var(--white);
-      font-family: var(--font-body);
-      font-size: 1rem;
-      font-weight: 700;
-      border: none;
-      border-radius: var(--radius-sm);
-      cursor: pointer;
-      margin-top: 4px;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .modal-submit:hover {
-      background: #689F38;
-      transform: translateY(-2px);
-    }
-    .modal-thankyou {
-      display: none;
-      text-align: center;
-      padding: 48px 24px;
-    }
+    .modal-field label { display: block; font-size: 0.9rem; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .modal-field input, .modal-field select, .modal-field textarea { width: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 0.95rem; color: var(--text); outline: none; transition: border-color 0.2s; background: var(--white); }
+    .modal-field input:focus, .modal-field select:focus, .modal-field textarea:focus { border-color: var(--primary); }
+    .modal-field textarea { height: 90px; resize: vertical; }
+    .modal-submit { width: 100%; padding: 16px; background: var(--accent); color: var(--white); font-family: var(--font-body); font-size: 1rem; font-weight: 700; border: none; border-radius: var(--radius-sm); cursor: pointer; margin-top: 4px; transition: background 0.2s, transform 0.2s; }
+    .modal-submit:hover { background: #689F38; transform: translateY(-2px); }
+    .modal-thankyou { display: none; text-align: center; padding: 48px 24px; }
     .modal-thankyou.show { display: block; }
-    .thankyou-icon {
-      width: 72px; height: 72px;
-      background: var(--accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-    }
+    .thankyou-icon { width: 72px; height: 72px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
     .thankyou-icon svg { width: 40px; height: 40px; fill: white; }
-    .modal-thankyou h3 {
-      font-family: var(--font-title);
-      font-size: 1.6rem;
-      color: var(--primary);
-      margin-bottom: 10px;
-    }
+    .modal-thankyou h3 { font-family: var(--font-title); font-size: 1.6rem; color: var(--primary); margin-bottom: 10px; }
     .modal-thankyou p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 24px; }
 
-    /* ============================
-       RESPONSIVE
-    ============================ */
+    /* RESPONSIVE */
     @media (max-width: 1024px) {
       .hero { grid-template-columns: 1fr; }
       .hero-image { height: 360px; }
@@ -1095,14 +269,12 @@
     }
     @media (max-width: 768px) {
       .section-pad { padding: 56px 0; }
-      .nav-links { display: none; }
-      .nav-cta .btn { display: none; }
+      .nav-links, .nav-cta .btn { display: none; }
       .hamburger { display: flex; }
       .hero-content { padding: 48px 24px; }
       .form-row { grid-template-columns: 1fr; }
-      .services-grid { grid-template-columns: 1fr; }
+      .services-grid, .trust-checklist { grid-template-columns: 1fr; }
       .trust-grid { grid-template-columns: 1fr 1fr; }
-      .trust-checklist { grid-template-columns: 1fr; }
       .reviews-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
       .cta-inner { flex-direction: column; text-align: center; }
@@ -1112,26 +284,18 @@
       .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
       .trust-bar-inner { gap: 20px; }
     }
-    @media (max-width: 480px) {
-      .trust-grid { grid-template-columns: 1fr; }
-    }
+    @media (max-width: 480px) { .trust-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
 
-<!-- ============================
-     NAVBAR
-============================ -->
 <nav class="navbar" role="navigation" aria-label="Main navigation">
   <div class="navbar-inner">
-    <a href="/" class="nav-logo" aria-label="Josh's Lawn Care home">
+    <a href="/" class="nav-logo" aria-label="Josh's Tree Care home">
       <div class="nav-logo-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 8C8 10 5.9 16.17 3.82 21H5.71C7 18 8 16.12 9 15c2 2 4 6 4 6h2s-1-4-3-6c1-1 2.5-2 5-2 0 0-1.5 1-2 3 .67-.33 1.5-.5 2-.5C18 15 20 12.5 20 9c-1.5 1-2.5 2-4 2 .5-1 2-3 2-3H17Z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21H5.71C7 18 8 16.12 9 15c2 2 4 6 4 6h2s-1-4-3-6c1-1 2.5-2 5-2 0 0-1.5 1-2 3 .67-.33 1.5-.5 2-.5C18 15 20 12.5 20 9c-1.5 1-2.5 2-4 2 .5-1 2-3 2-3H17Z"/></svg>
       </div>
-      <div class="nav-logo-text">
-        Josh's Lawn Care
-        <span>Nashville, TN</span>
-      </div>
+      <div class="nav-logo-text">Josh's Tree Care<span>Nashville, TN</span></div>
     </a>
     <ul class="nav-links">
       <li><a href="/#services">Services</a></li>
@@ -1145,11 +309,9 @@
       <a href="tel:6155550100" class="nav-phone">(615) 555-0100</a>
       <button class="btn btn-primary" data-quote-trigger>Get a Free Quote</button>
     </div>
-    <button class="hamburger" id="menuToggle" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
-  <div class="mobile-menu" id="mobileMenu" role="menu">
+  <div class="mobile-menu" id="mobileMenu">
     <a href="/#services">Services</a>
     <a href="/#about">About</a>
     <a href="/#reviews">Reviews</a>
@@ -1161,20 +323,18 @@
   </div>
 </nav>
 
-<!-- ============================
-     HERO — VARIANT 3 [IMG]
-============================ -->
+<!-- HERO [IMG] -->
 <section class="hero" aria-label="Hero">
   <div class="hero-content">
-    <div class="hero-tag">Nashville's Trusted Lawn Pros</div>
-    <h1>A Lawn That <span class="accent">Stands Out</span> on Your Street</h1>
-    <p class="hero-subtitle">Professional lawn mowing, fertilization, weed control, and seasonal cleanup for Nashville homeowners and commercial properties.</p>
+    <div class="hero-tag">Nashville's Trusted Tree Pros</div>
+    <h1>Tree Service Done <span class="accent">Right</span> — Every Time</h1>
+    <p class="hero-subtitle">Professional tree removal, trimming, stump grinding, and emergency storm cleanup for Nashville homeowners and commercial properties.</p>
     <a href="tel:6155550100" class="hero-phone">
       <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8Z"/></svg>
       (615) 555-0100
     </a>
     <div class="hero-form">
-      <h3>Get Your Free Lawn Care Quote</h3>
+      <h3>Get Your Free Tree Service Quote</h3>
       <form id="heroForm" novalidate>
         <div class="form-row">
           <input class="form-input" type="text" placeholder="Your Name" required>
@@ -1183,13 +343,13 @@
         <div class="form-row single">
           <select class="form-select">
             <option value="" disabled selected>Service Needed</option>
-            <option>Lawn Mowing</option>
-            <option>Fertilization &amp; Weed Control</option>
-            <option>Aeration &amp; Overseeding</option>
-            <option>Mulching</option>
-            <option>Hedge Trimming</option>
-            <option>Seasonal Cleanup</option>
-            <option>Leaf Removal</option>
+            <option>Tree Removal</option>
+            <option>Tree Trimming &amp; Pruning</option>
+            <option>Stump Grinding &amp; Removal</option>
+            <option>Land Clearing</option>
+            <option>Emergency Tree Service</option>
+            <option>Storm Damage Cleanup</option>
+            <option>Arborist Consultation</option>
             <option>Not Sure — Need Advice</option>
           </select>
         </div>
@@ -1198,182 +358,113 @@
     </div>
   </div>
   <div class="hero-image">
-    <img
-      src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80"
-      alt="Freshly mowed green lawn in Nashville TN by Josh's Lawn Care"
-      loading="eager"
-    >
+    <img src="https://images.unsplash.com/photo-1542621334-a254cf47733d?w=900&q=80" alt="Professional tree removal service in Nashville TN by Josh's Tree Care" loading="eager">
     <div class="hero-image-overlay"></div>
   </div>
 </section>
 
-<!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="trust-bar-inner">
-    <div class="trust-item">
-      <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      4.9 Star Average Rating
-    </div>
-    <div class="trust-item">
-      <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-      Fully Licensed &amp; Insured
-    </div>
-    <div class="trust-item">
-      <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      Satisfaction Guaranteed
-    </div>
-    <div class="trust-item">
-      <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-      500+ Happy Customers
-    </div>
-    <div class="trust-item">
-      <svg viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-      Same-Week Scheduling
-    </div>
+    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>4.9 Star Average Rating</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>Fully Licensed &amp; Insured</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>ISA Certified Arborists</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>500+ Trees Removed</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>24/7 Emergency Service</div>
   </div>
 </div>
 
-<!-- ============================
-     SERVICES — [PLAIN] id=services
-============================ -->
+<!-- SERVICES [PLAIN] -->
 <section class="services-section section-pad" id="services">
   <div class="container">
     <div class="section-header">
       <div class="tag">What We Do</div>
-      <h2 class="section-title">Complete Lawn Care Services for Nashville</h2>
-      <p class="section-subtitle">From weekly mowing to full-season lawn programs — we handle every aspect of your yard so you don't have to.</p>
+      <h2 class="section-title">Complete Tree Care Services for Nashville</h2>
+      <p class="section-subtitle">From single-tree removals to full property clearing — we handle every aspect of tree care safely and professionally.</p>
     </div>
     <div class="services-grid">
-
       <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#1B5E20" stroke-width="1.8"><path d="M3 17l2-8 3 5 3-9 3 7 3-4 2 9"/><path d="M3 21h18"/></svg>
-        </div>
-        <h3>Lawn Mowing</h3>
-        <p>Regular mowing on weekly or bi-weekly schedules keeps your lawn healthy, even, and looking sharp all season long.</p>
-        <a href="/#contact" class="service-link" data-quote-trigger>
-          Get a Quote <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1B5E20" stroke-width="1.8"><path d="M12 2v20M8 6l4-4 4 4M6 12l6-3 6 3M4 18l8-4 8 4"/></svg></div>
+        <h3>Tree Removal</h3>
+        <p>Safe, efficient removal of dead, diseased, or hazardous trees. We handle everything from small yard trees to large canopy trees close to structures.</p>
+        <a href="/#contact" class="service-link" data-quote-trigger>Get a Quote <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
-
       <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#1B5E20" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-        </div>
-        <h3>Fertilization &amp; Weed Control</h3>
-        <p>Targeted fertilization programs and pre/post-emergent weed control that keep your lawn thick, green, and weed-free.</p>
-        <a href="/#contact" class="service-link" data-quote-trigger>
-          Get a Quote <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1B5E20" stroke-width="1.8"><path d="M17 3a2.828 2.828 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></div>
+        <h3>Tree Trimming &amp; Pruning</h3>
+        <p>Crown cleaning, structural pruning, and deadwood removal that improve tree health, shape, and safety while protecting your property.</p>
+        <a href="/#contact" class="service-link" data-quote-trigger>Get a Quote <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
-
       <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#1B5E20" stroke-width="1.8"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-        </div>
-        <h3>Aeration &amp; Overseeding</h3>
-        <p>Core aeration breaks up compaction and overseeding fills in thin spots — together they transform a struggling lawn.</p>
-        <a href="/#contact" class="service-link" data-quote-trigger>
-          Get a Quote <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1B5E20" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M3 12h1M20 12h1M12 3v1M12 20v1M6.34 6.34l.7.7M16.96 16.96l.7.7M6.34 17.66l.7-.7M16.96 7.04l.7-.7"/></svg></div>
+        <h3>Stump Grinding &amp; Removal</h3>
+        <p>Complete stump grinding that eliminates tripping hazards, pest harborage, and eyesores — ground below grade so you can replant or build over the spot.</p>
+        <a href="/#contact" class="service-link" data-quote-trigger>Get a Quote <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
-
       <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#1B5E20" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <h3>Mulching &amp; Bed Care</h3>
-        <p>Fresh mulch installation, edging, and bed maintenance that improve curb appeal and protect your plantings.</p>
-        <a href="/#contact" class="service-link" data-quote-trigger>
-          Get a Quote <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1B5E20" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>Land Clearing</h3>
+        <p>Lot preparation, fence line clearing, and overgrown property cleanup. We clear and haul away all material so your land is ready for its next use.</p>
+        <a href="/#contact" class="service-link" data-quote-trigger>Get a Quote <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
-
       <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#1B5E20" stroke-width="1.8"><path d="M17 3a2.828 2.828 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
-        </div>
-        <h3>Hedge &amp; Shrub Trimming</h3>
-        <p>Precise trimming and shaping of hedges, shrubs, and ornamental plantings for a clean, polished property edge.</p>
-        <a href="/#contact" class="service-link" data-quote-trigger>
-          Get a Quote <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1B5E20" stroke-width="1.8"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+        <h3>Emergency Tree Service</h3>
+        <p>24/7 emergency response for trees down on homes, vehicles, or blocking roads. We mobilize fast to make your property safe when it matters most.</p>
+        <a href="/#contact" class="service-link" data-quote-trigger>Get a Quote <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
-
       <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#1B5E20" stroke-width="1.8"><path d="M7 17l-4 4M3 3l18 18M10.5 6C8 6 5 8 5 11c0 2.5 2 4.5 4 5.5"/><path d="M14 7.5c2.5 1 4.5 3 4.5 5.5 0 3-3 5-5.5 5"/></svg>
-        </div>
-        <h3>Leaf Removal &amp; Cleanup</h3>
-        <p>Fall leaf removal and seasonal cleanup services that prep your lawn for winter and jump-start spring green-up.</p>
-        <a href="/#contact" class="service-link" data-quote-trigger>
-          Get a Quote <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1B5E20" stroke-width="1.8"><path d="M20 17.58A5 5 0 0018 8h-1.26A8 8 0 104 15.25M8 16h.01M8 20h.01M12 18h.01M12 22h.01M16 16h.01"/></svg></div>
+        <h3>Storm Damage Cleanup</h3>
+        <p>Post-storm debris removal, broken limb clearing, and fallen tree extraction. We work with insurance claims and get your property cleared fast.</p>
+        <a href="/#contact" class="service-link" data-quote-trigger>Get a Quote <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ============================
-     SERVICE ESTIMATOR QUIZ [TEXTURE] — INTERACTIVE #2
-============================ -->
+<!-- QUIZ [TEXTURE] -->
 <section class="quiz-section section-pad">
   <div class="container">
     <div class="quiz-wrapper">
       <div class="tag">Find Your Service</div>
-      <h2 class="section-title">Not Sure What Your Lawn Needs?</h2>
-      <p class="section-subtitle">Answer 3 quick questions and we'll point you to the right service.</p>
-
+      <h2 class="section-title">Not Sure What Tree Service You Need?</h2>
+      <p class="section-subtitle">Answer 3 quick questions and we'll point you in the right direction.</p>
       <div class="quiz-card">
         <div class="quiz-progress" id="quizProgress">
-          <div class="quiz-dot active"></div>
-          <div class="quiz-dot"></div>
-          <div class="quiz-dot"></div>
+          <div class="quiz-dot active"></div><div class="quiz-dot"></div><div class="quiz-dot"></div>
         </div>
-
-        <!-- Step 1 -->
         <div class="quiz-step active" data-step="1">
-          <div class="quiz-question">What's the biggest issue with your lawn right now?</div>
+          <div class="quiz-question">What's the situation with your tree?</div>
           <div class="quiz-options">
-            <button class="quiz-option" data-value="overgrown">It's overgrown / needs cutting</button>
-            <button class="quiz-option" data-value="weeds">Weeds taking over</button>
-            <button class="quiz-option" data-value="thin">Thin, bare, or patchy areas</button>
-            <button class="quiz-option" data-value="curb">Just want it looking its best</button>
+            <button class="quiz-option" data-value="dead">It's dead or dying</button>
+            <button class="quiz-option" data-value="overgrown">Overgrown / needs shaping</button>
+            <button class="quiz-option" data-value="storm">Storm damage or emergency</button>
+            <button class="quiz-option" data-value="stump">There's a stump I need gone</button>
           </div>
         </div>
-
-        <!-- Step 2 -->
         <div class="quiz-step" data-step="2">
-          <div class="quiz-question">How often do you want service?</div>
+          <div class="quiz-question">How close is the tree to your house or structures?</div>
           <div class="quiz-options">
-            <button class="quiz-option" data-value="weekly">Weekly</button>
-            <button class="quiz-option" data-value="biweekly">Every 2 weeks</button>
-            <button class="quiz-option" data-value="monthly">Monthly</button>
-            <button class="quiz-option" data-value="onetime">One-time only</button>
+            <button class="quiz-option" data-value="touching">Touching or very close</button>
+            <button class="quiz-option" data-value="nearby">Within 20 feet</button>
+            <button class="quiz-option" data-value="open">Open yard, nothing nearby</button>
+            <button class="quiz-option" data-value="unsure">Not sure</button>
           </div>
         </div>
-
-        <!-- Step 3 -->
         <div class="quiz-step" data-step="3">
-          <div class="quiz-question">What's your property type?</div>
+          <div class="quiz-question">How urgent is the situation?</div>
           <div class="quiz-options">
-            <button class="quiz-option" data-value="residential">Residential home</button>
-            <button class="quiz-option" data-value="commercial">Commercial property</button>
-            <button class="quiz-option" data-value="rental">Rental property</button>
-            <button class="quiz-option" data-value="hoa">HOA / neighborhood</button>
+            <button class="quiz-option" data-value="emergency">Emergency — needs attention now</button>
+            <button class="quiz-option" data-value="soon">Soon — within the next week</button>
+            <button class="quiz-option" data-value="planning">Planning ahead — no rush</button>
+            <button class="quiz-option" data-value="quote">Just getting a quote</button>
           </div>
         </div>
-
-        <!-- Result -->
         <div class="quiz-result" id="quizResult">
-          <div class="quiz-result-icon">
-            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
-          </div>
-          <h3 id="quizResultTitle">We Recommend: Lawn Mowing</h3>
-          <p id="quizResultDesc">Based on your answers, regular mowing service is the best starting point for your lawn.</p>
-          <button class="btn btn-primary" data-quote-trigger>Get a Free Quote for This Service</button>
-          <br>
+          <div class="quiz-result-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <h3 id="quizResultTitle">We Recommend: Tree Removal</h3>
+          <p id="quizResultDesc">Based on your answers, full tree removal is the safest solution for your situation.</p>
+          <button class="btn btn-primary" data-quote-trigger>Get a Free Quote for This Service</button><br>
           <button class="quiz-restart" id="quizRestart">Start over</button>
         </div>
       </div>
@@ -1381,80 +472,48 @@
   </div>
 </section>
 
-<!-- ============================
-     WHY CHOOSE US — Counters [PLAIN] id=about
-============================ -->
+<!-- WHY CHOOSE US [PLAIN] -->
 <section class="trust-section section-pad" id="about">
   <div class="container">
     <div class="section-header">
       <div class="tag">Why Josh's</div>
-      <h2 class="section-title">Nashville Homeowners Trust Us to Show Up and Do It Right</h2>
-      <p class="section-subtitle">Reliable, professional lawn care from a local team that treats your property like their own.</p>
+      <h2 class="section-title">Nashville Homeowners Trust Us to Get the Job Done Safely</h2>
+      <p class="section-subtitle">Reliable, certified tree care from a local crew that treats your property with the same respect they give their own.</p>
     </div>
-
     <div class="trust-grid">
       <div class="trust-stat">
-        <div class="trust-stat-icon">
-          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-        </div>
+        <div class="trust-stat-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
         <span class="counter" data-target="500" data-suffix="+">0</span>
-        <div class="trust-stat-label">Happy Customers Served</div>
+        <div class="trust-stat-label">Trees Removed Safely</div>
       </div>
       <div class="trust-stat">
-        <div class="trust-stat-icon">
-          <svg viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-        </div>
+        <div class="trust-stat-icon"><svg viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
         <span class="counter" data-target="8" data-suffix="+">0</span>
         <div class="trust-stat-label">Years in Business</div>
       </div>
       <div class="trust-stat">
-        <div class="trust-stat-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
+        <div class="trust-stat-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
         <span class="counter" data-target="4" data-suffix=".9 ★">0</span>
         <div class="trust-stat-label">Average Star Rating</div>
       </div>
       <div class="trust-stat">
-        <div class="trust-stat-icon">
-          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-        </div>
-        <span class="counter" data-target="100" data-suffix="%">0</span>
-        <div class="trust-stat-label">Satisfaction Guaranteed</div>
+        <div class="trust-stat-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+        <span class="counter" data-target="0" data-suffix=" Property Damage Claims">0</span>
+        <div class="trust-stat-label">Zero Property Damage Claims</div>
       </div>
     </div>
-
     <div class="trust-checklist">
-      <div class="trust-check">
-        <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
-        <p><strong>Locally owned and operated</strong> — Josh is on the job, not a franchise dispatcher passing your call down the line.</p>
-      </div>
-      <div class="trust-check">
-        <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
-        <p><strong>Fully licensed and insured</strong> — you're protected on every visit. No paperwork headaches if something goes wrong.</p>
-      </div>
-      <div class="trust-check">
-        <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
-        <p><strong>Same-week scheduling available</strong> — no 3-week waitlists. We're ready when your lawn needs us.</p>
-      </div>
-      <div class="trust-check">
-        <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
-        <p><strong>Transparent flat-rate pricing</strong> — you'll know the cost before we start. Zero surprise charges on invoice day.</p>
-      </div>
-      <div class="trust-check">
-        <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
-        <p><strong>Professional equipment on every job</strong> — commercial-grade mowers and tools that leave a cleaner cut than consumer gear.</p>
-      </div>
-      <div class="trust-check">
-        <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
-        <p><strong>Satisfaction or we come back</strong> — if you're not happy with the work, we return and make it right at no charge.</p>
-      </div>
+      <div class="trust-check"><div class="check-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><p><strong>ISA Certified Arborists on staff</strong> — every job is assessed by a credentialed professional, not just a crew with a chainsaw.</p></div>
+      <div class="trust-check"><div class="check-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><p><strong>$2M general liability insurance</strong> — full coverage on every job. We provide a certificate before we start.</p></div>
+      <div class="trust-check"><div class="check-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><p><strong>24/7 emergency response</strong> — storm-downed trees don't wait for business hours, and neither do we.</p></div>
+      <div class="trust-check"><div class="check-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><p><strong>Complete cleanup included</strong> — we haul every branch, log, and wood chip off your property. Not a stick left behind.</p></div>
+      <div class="trust-check"><div class="check-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><p><strong>Transparent flat-rate pricing</strong> — your quote is your price. No hidden fees, no surprise totals on invoice day.</p></div>
+      <div class="trust-check"><div class="check-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><p><strong>We work with insurance claims</strong> — we document the work and provide everything your adjuster needs for storm damage jobs.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ============================
-     REVIEWS [IMG overlay] id=reviews
-============================ -->
+<!-- REVIEWS [IMG overlay] -->
 <section class="reviews-section section-pad" id="reviews">
   <div class="container">
     <div class="section-header center">
@@ -1463,71 +522,29 @@
       <p class="section-subtitle">Real feedback from real customers across Nashville and surrounding areas.</p>
     </div>
     <div class="reviews-grid">
-
       <div class="review-card">
-        <div class="review-stars">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <p class="review-text">"Josh and his crew are incredibly reliable. My lawn has never looked better — perfectly edged every single time. I've tried four other services and none of them come close."</p>
-        <div class="review-author">
-          <div class="review-avatar">M</div>
-          <div>
-            <div class="review-name">Michael T.</div>
-            <div class="review-date">Nashville, TN · March 2025</div>
-          </div>
-        </div>
+        <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="review-text">"Josh's crew took down a massive oak that was leaning over my roof. They were in and out in half a day, didn't damage a single shrub, and cleaned up everything. I was blown away."</p>
+        <div class="review-author"><div class="review-avatar">M</div><div><div class="review-name">Michael T.</div><div class="review-date">Nashville, TN · March 2025</div></div></div>
       </div>
-
       <div class="review-card">
-        <div class="review-stars">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <p class="review-text">"Hired Josh for a complete fertilization and weed control program after my backyard was overrun. Three months in — completely different yard. The neighbors keep asking what I did."</p>
-        <div class="review-author">
-          <div class="review-avatar">S</div>
-          <div>
-            <div class="review-name">Sarah K.</div>
-            <div class="review-date">Brentwood, TN · February 2025</div>
-          </div>
-        </div>
+        <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="review-text">"Called at 8pm after a storm dropped a tree on my fence. Josh answered immediately and had a crew here by 9am the next morning. Fast, fair price, and total professionals."</p>
+        <div class="review-author"><div class="review-avatar">S</div><div><div class="review-name">Sarah K.</div><div class="review-date">Brentwood, TN · February 2025</div></div></div>
       </div>
-
       <div class="review-card">
-        <div class="review-stars">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <p class="review-text">"We use Josh's for our rental properties and the service is always consistent. Easy scheduling, fair pricing, and the tenants never complain about the yard. That's exactly what I need."</p>
-        <div class="review-author">
-          <div class="review-avatar">D</div>
-          <div>
-            <div class="review-name">David R.</div>
-            <div class="review-date">Franklin, TN · January 2025</div>
-          </div>
-        </div>
+        <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="review-text">"Had four large stumps ground out after a clearing project. Josh's team was efficient, the price was better than two other quotes I got, and the yard looks great. Will use again."</p>
+        <div class="review-author"><div class="review-avatar">D</div><div><div class="review-name">David R.</div><div class="review-date">Franklin, TN · January 2025</div></div></div>
       </div>
-
     </div>
     <div class="reviews-cta">
-      <button class="btn btn-outline" data-quote-trigger>Join 500+ Happy Nashville Customers — Get a Free Quote</button>
+      <button class="btn btn-outline" data-quote-trigger>Join 500+ Satisfied Nashville Customers — Get a Free Quote</button>
     </div>
   </div>
 </section>
 
-<!-- ============================
-     SERVICE AREA [PLAIN] id=service-area
-============================ -->
+<!-- SERVICE AREA [PLAIN] -->
 <section class="area-section section-pad" id="service-area">
   <div class="container">
     <div class="section-header">
@@ -1536,118 +553,62 @@
     </div>
     <div class="area-inner">
       <div class="area-text">
-        <p>Josh's Lawn Care serves homeowners, rental property owners, and commercial clients throughout the Greater Nashville metro area. Whether you're in the heart of Nashville or one of the surrounding suburbs, our crew can be at your property this week.</p>
+        <p>Josh's Tree Care serves homeowners, property managers, HOAs, and commercial clients throughout the Greater Nashville metro area. Whether you're in Nashville proper or one of the surrounding suburbs, our crew can be at your property this week.</p>
         <p>Not sure if we cover your area? <a href="tel:6155550100" style="color:var(--primary);font-weight:700;">Call (615) 555-0100</a> and we'll confirm availability in minutes.</p>
-        <button class="btn btn-dark" data-quote-trigger>Check Availability in My Neighborhood</button>
+        <button class="btn btn-dark" data-quote-trigger>Check Availability in My Area</button>
       </div>
       <div>
         <div class="area-pills">
-          <span class="area-pill">Nashville</span>
-          <span class="area-pill">Brentwood</span>
-          <span class="area-pill">Franklin</span>
-          <span class="area-pill">Murfreesboro</span>
-          <span class="area-pill">Smyrna</span>
-          <span class="area-pill">La Vergne</span>
-          <span class="area-pill">Antioch</span>
-          <span class="area-pill">Nolensville</span>
-          <span class="area-pill">Spring Hill</span>
-          <span class="area-pill">Mount Juliet</span>
-          <span class="area-pill">Hermitage</span>
-          <span class="area-pill">Madison</span>
-          <span class="area-pill">Goodlettsville</span>
-          <span class="area-pill">Hendersonville</span>
-          <span class="area-pill">Gallatin</span>
-          <span class="area-pill">Lebanon</span>
+          <span class="area-pill">Nashville</span><span class="area-pill">Brentwood</span><span class="area-pill">Franklin</span><span class="area-pill">Murfreesboro</span><span class="area-pill">Smyrna</span><span class="area-pill">La Vergne</span><span class="area-pill">Antioch</span><span class="area-pill">Nolensville</span><span class="area-pill">Spring Hill</span><span class="area-pill">Mount Juliet</span><span class="area-pill">Hermitage</span><span class="area-pill">Madison</span><span class="area-pill">Goodlettsville</span><span class="area-pill">Hendersonville</span><span class="area-pill">Gallatin</span><span class="area-pill">Lebanon</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================
-     FAQ — Animated Accordion [IMG overlay] INTERACTIVE #3 id=faq
-============================ -->
+<!-- FAQ [IMG overlay] -->
 <section class="faq-section section-pad" id="faq">
   <div class="container">
     <div class="section-header center">
       <div class="tag">Common Questions</div>
-      <h2 class="section-title">FAQ — Josh's Lawn Care</h2>
+      <h2 class="section-title">FAQ — Josh's Tree Care</h2>
       <p class="section-subtitle">Quick answers to what Nashville homeowners ask most before hiring us.</p>
     </div>
     <div class="faq-list">
-
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>How much does lawn mowing cost in Nashville?</span>
-          <div class="faq-icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">Most residential lawn mowing in Nashville runs between $40 and $120 per visit depending on lot size, terrain, and service frequency. We offer flat-rate pricing based on your property — call or request a quote and we'll give you an exact number before we start.</div>
-        </div>
+        <button class="faq-question" aria-expanded="false"><span>How much does tree removal cost in Nashville?</span><div class="faq-icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Tree removal in Nashville typically runs between $300 and $2,000+ depending on tree size, location, proximity to structures, and access. We provide free, on-site quotes so you know the exact cost before we start.</div></div>
       </div>
-
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>Do you offer weekly lawn care contracts?</span>
-          <div class="faq-icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">Yes. We offer weekly, bi-weekly, and monthly recurring service agreements. Recurring clients get priority scheduling, consistent crews, and reduced per-visit rates. One-time services are also available — no contract required.</div>
-        </div>
+        <button class="faq-question" aria-expanded="false"><span>Do you offer 24/7 emergency tree service?</span><div class="faq-icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes. We respond to emergency calls around the clock, including nights, weekends, and holidays. If a tree has fallen on your home, vehicle, or is blocking access, call us immediately at <a href="tel:6155550100" style="color:var(--accent-light)">(615) 555-0100</a>.</div></div>
       </div>
-
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>Are you licensed and insured?</span>
-          <div class="faq-icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">Yes, Josh's Lawn Care is fully licensed and carries general liability insurance. We can provide proof of insurance on request — this protects both you and our crew on every job.</div>
-        </div>
+        <button class="faq-question" aria-expanded="false"><span>Are you licensed and insured for tree work?</span><div class="faq-icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes. Josh's Tree Care holds all required licenses for tree work in Tennessee and carries $2 million in general liability insurance plus workers' compensation coverage. We provide a certificate of insurance before any job starts.</div></div>
       </div>
-
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>What areas do you serve?</span>
-          <div class="faq-icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">We serve Nashville and the surrounding metro area including Brentwood, Franklin, Murfreesboro, Smyrna, La Vergne, Spring Hill, Mount Juliet, Hermitage, Hendersonville, and more. If you're unsure whether we cover your neighborhood, call us at <a href="tel:6155550100" style="color:var(--accent-light)">(615) 555-0100</a>.</div>
-        </div>
+        <button class="faq-question" aria-expanded="false"><span>Do you clean up after the job?</span><div class="faq-icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Complete cleanup and haul-away is included in every job. We remove all branches, logs, and wood chips from your property. If you'd like to keep the wood for firewood, just let us know.</div></div>
       </div>
-
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>How do I get a quote?</span>
-          <div class="faq-icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">Call us at <a href="tel:6155550100" style="color:var(--accent-light)">(615) 555-0100</a> or fill out the quote form on this page. We typically respond within a few hours and can often schedule a same-week visit to assess your property before giving a final price.</div>
-        </div>
+        <button class="faq-question" aria-expanded="false"><span>Can you help with my insurance claim after storm damage?</span><div class="faq-icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Absolutely. We provide photos, documentation, and itemized invoices that meet insurance adjuster requirements. Call us as soon as the storm passes — we'll help you document and prioritize the work.</div></div>
       </div>
-
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>What happens if it rains on my scheduled service day?</span>
-          <div class="faq-icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">Light rain usually isn't a problem. Heavy rain or standing water will cause us to reschedule — we'll contact you to pick the next available slot, typically within 1–2 days. We never skip a scheduled visit without notifying you first.</div>
-        </div>
+        <button class="faq-question" aria-expanded="false"><span>Do I need a permit to remove a tree in Nashville?</span><div class="faq-icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div></button>
+        <div class="faq-answer"><div class="faq-answer-inner">It depends on the tree size, species, and your HOA rules. Metro Nashville has a tree preservation ordinance that may require permits for certain removals. We'll advise you during the quote and can handle the permit process if needed.</div></div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ============================
-     CTA BAR [PLAIN brand] id=contact
-============================ -->
+<!-- CTA [brand color] -->
 <section class="cta-section section-pad-sm" id="contact">
   <div class="container">
     <div class="cta-inner">
       <div class="cta-text">
-        <h2>Ready for a Lawn You're Proud Of?</h2>
+        <h2>Need a Tree Taken Care Of?</h2>
         <p>Serving Nashville and the surrounding area — same-week appointments available.</p>
       </div>
       <div class="cta-actions">
@@ -1658,36 +619,29 @@
   </div>
 </section>
 
-<!-- ============================
-     FOOTER [DARK]
-============================ -->
+<!-- FOOTER [DARK] -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div>
         <div class="footer-logo">
-          <div class="footer-logo-icon">
-            <svg viewBox="0 0 24 24" fill="white"><path d="M17 8C8 10 5.9 16.17 3.82 21H5.71C7 18 8 16.12 9 15c2 2 4 6 4 6h2s-1-4-3-6c1-1 2.5-2 5-2 0 0-1.5 1-2 3 .67-.33 1.5-.5 2-.5C18 15 20 12.5 20 9c-1.5 1-2.5 2-4 2 .5-1 2-3 2-3H17Z"/></svg>
-          </div>
-          <div class="footer-logo-text">Josh's Lawn Care</div>
+          <div class="footer-logo-icon"><svg viewBox="0 0 24 24" fill="white"><path d="M17 8C8 10 5.9 16.17 3.82 21H5.71C7 18 8 16.12 9 15c2 2 4 6 4 6h2s-1-4-3-6c1-1 2.5-2 5-2 0 0-1.5 1-2 3 .67-.33 1.5-.5 2-.5C18 15 20 12.5 20 9c-1.5 1-2.5 2-4 2 .5-1 2-3 2-3H17Z"/></svg></div>
+          <div class="footer-logo-text">Josh's Tree Care</div>
         </div>
-        <p class="footer-desc">Professional lawn mowing, fertilization, weed control, aeration, and seasonal cleanup for Nashville homeowners and businesses. Locally owned since 2017.</p>
+        <p class="footer-desc">Professional tree removal, trimming, stump grinding, land clearing, and emergency tree service for Nashville homeowners and businesses. ISA Certified. Locally owned since 2017.</p>
         <div class="footer-contact">
-          <a href="tel:6155550100">
-            <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8Z"/></svg>
-            (615) 555-0100
-          </a>
+          <a href="tel:6155550100"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8Z"/></svg>(615) 555-0100</a>
         </div>
       </div>
       <div>
         <h4>Services</h4>
         <ul class="footer-links">
-          <li><a href="/#services">Lawn Mowing</a></li>
-          <li><a href="/#services">Fertilization &amp; Weed Control</a></li>
-          <li><a href="/#services">Aeration &amp; Overseeding</a></li>
-          <li><a href="/#services">Mulching &amp; Bed Care</a></li>
-          <li><a href="/#services">Hedge &amp; Shrub Trimming</a></li>
-          <li><a href="/#services">Leaf Removal &amp; Cleanup</a></li>
+          <li><a href="/#services">Tree Removal</a></li>
+          <li><a href="/#services">Tree Trimming &amp; Pruning</a></li>
+          <li><a href="/#services">Stump Grinding &amp; Removal</a></li>
+          <li><a href="/#services">Land Clearing</a></li>
+          <li><a href="/#services">Emergency Tree Service</a></li>
+          <li><a href="/#services">Storm Damage Cleanup</a></li>
         </ul>
       </div>
       <div>
@@ -1712,59 +666,43 @@
   </div>
   <div class="footer-bottom">
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
-      <span>© 2025 Josh's Lawn Care. All rights reserved. Nashville, TN.</span>
+      <span>© 2025 Josh's Tree Care. All rights reserved. Nashville, TN.</span>
       <span>Site by <a href="https://victreewebsites.com" target="_blank" rel="noopener">VicTree Websites</a></span>
     </div>
   </div>
 </footer>
 
-<!-- ============================
-     QUOTE MODAL
-============================ -->
+<!-- MODAL -->
 <div class="modal-overlay" id="quoteModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
   <div class="modal">
     <div class="modal-header">
-      <h3 id="modalTitle">Get Your Free Lawn Care Quote</h3>
+      <h3 id="modalTitle">Get Your Free Tree Service Quote</h3>
       <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
     </div>
-    <div class="modal-body" id="modalBody">
+    <div class="modal-body">
       <form id="quoteForm" novalidate>
-        <div class="modal-field">
-          <label for="mName">Full Name</label>
-          <input type="text" id="mName" placeholder="Jane Smith" required>
-        </div>
-        <div class="modal-field">
-          <label for="mPhone">Phone Number</label>
-          <input type="tel" id="mPhone" placeholder="(615) 555-0000" required>
-        </div>
-        <div class="modal-field">
-          <label for="mEmail">Email Address</label>
-          <input type="email" id="mEmail" placeholder="jane@email.com" required>
-        </div>
+        <div class="modal-field"><label for="mName">Full Name</label><input type="text" id="mName" placeholder="Jane Smith" required></div>
+        <div class="modal-field"><label for="mPhone">Phone Number</label><input type="tel" id="mPhone" placeholder="(615) 555-0000" required></div>
+        <div class="modal-field"><label for="mEmail">Email Address</label><input type="email" id="mEmail" placeholder="jane@email.com" required></div>
         <div class="modal-field">
           <label for="mService">Service Needed</label>
           <select id="mService" required>
             <option value="" disabled selected>Select a service</option>
-            <option>Lawn Mowing</option>
-            <option>Fertilization &amp; Weed Control</option>
-            <option>Aeration &amp; Overseeding</option>
-            <option>Mulching &amp; Bed Care</option>
-            <option>Hedge &amp; Shrub Trimming</option>
-            <option>Leaf Removal &amp; Cleanup</option>
-            <option>Multiple Services / Full Program</option>
+            <option>Tree Removal</option>
+            <option>Tree Trimming &amp; Pruning</option>
+            <option>Stump Grinding &amp; Removal</option>
+            <option>Land Clearing</option>
+            <option>Emergency Tree Service</option>
+            <option>Storm Damage Cleanup</option>
+            <option>Arborist Consultation</option>
             <option>Not Sure — Need Advice</option>
           </select>
         </div>
-        <div class="modal-field">
-          <label for="mMessage">Message / Details (optional)</label>
-          <textarea id="mMessage" placeholder="Tell us about your property or any specific needs…"></textarea>
-        </div>
+        <div class="modal-field"><label for="mMessage">Message / Details (optional)</label><textarea id="mMessage" placeholder="Tell us about the tree — size, location, any structures nearby…"></textarea></div>
         <button type="submit" class="modal-submit">Send My Request</button>
       </form>
       <div class="modal-thankyou" id="modalThankYou">
-        <div class="thankyou-icon">
-          <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
-        </div>
+        <div class="thankyou-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
         <h3 id="thankYouName">Thank You!</h3>
         <p>We received your request and will be in touch within 24 hours.</p>
         <button class="btn btn-primary" id="modalCloseThanks">Close</button>
@@ -1773,68 +711,38 @@
   </div>
 </div>
 
-<!-- ============================
-     LOCAL BUSINESS SCHEMA
-============================ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Josh's Lawn Care",
-  "description": "Professional lawn mowing, fertilization, weed control, aeration, and seasonal cleanup in Nashville, TN and surrounding areas.",
-  "url": "https://joshslawncare.com",
+  "name": "Josh's Tree Care",
+  "description": "Professional tree removal, trimming, stump grinding, land clearing, and emergency tree service in Nashville, TN.",
+  "url": "https://joshstreecare.com",
   "telephone": "+16155550100",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Nashville",
-    "addressRegion": "TN",
-    "addressCountry": "US"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 36.1627,
-    "longitude": -86.7816
-  },
-  "areaServed": [
-    "Nashville", "Brentwood", "Franklin", "Murfreesboro", "Smyrna",
-    "La Vergne", "Spring Hill", "Mount Juliet", "Hermitage", "Hendersonville"
-  ],
+  "address": { "@type": "PostalAddress", "addressLocality": "Nashville", "addressRegion": "TN", "addressCountry": "US" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 36.1627, "longitude": -86.7816 },
+  "areaServed": ["Nashville","Brentwood","Franklin","Murfreesboro","Smyrna","Spring Hill","Mount Juliet","Hermitage","Hendersonville"],
   "openingHours": "Mo-Sa 07:00-18:00",
   "priceRange": "$$",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "127"
-  }
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "127" }
 }
 </script>
 
-<!-- ============================
-     JAVASCRIPT
-============================ -->
 <script>
-  /* ---- Mobile Menu ---- */
   const menuToggle = document.getElementById('menuToggle');
   const mobileMenu = document.getElementById('mobileMenu');
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('open');
-  });
-  mobileMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => mobileMenu.classList.remove('open'));
-  });
+  menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
 
-  /* ---- Quote Modal ---- */
   const modal = document.getElementById('quoteModal');
-  const modalClose = document.getElementById('modalClose');
-  const modalCloseThanks = document.getElementById('modalCloseThanks');
   const quoteForm = document.getElementById('quoteForm');
   const thankYouDiv = document.getElementById('modalThankYou');
 
   function openModal() {
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
-    const firstInput = modal.querySelector('input, select, textarea');
-    if (firstInput) setTimeout(() => firstInput.focus(), 100);
+    const first = modal.querySelector('input,select,textarea');
+    if (first) setTimeout(() => first.focus(), 100);
   }
   function closeModal() {
     modal.classList.remove('open');
@@ -1844,89 +752,58 @@
     quoteForm.reset();
   }
 
-  document.addEventListener('click', (e) => {
-    if (e.target.closest('[data-quote-trigger]')) openModal();
-  });
-  modalClose.addEventListener('click', closeModal);
-  modalCloseThanks.addEventListener('click', closeModal);
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-  });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
-  });
+  document.addEventListener('click', e => { if (e.target.closest('[data-quote-trigger]')) openModal(); });
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  document.getElementById('modalCloseThanks').addEventListener('click', closeModal);
+  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
 
-  quoteForm.addEventListener('submit', (e) => {
+  quoteForm.addEventListener('submit', e => {
     e.preventDefault();
-    const nameVal = document.getElementById('mName').value.trim();
-    const firstName = nameVal.split(' ')[0] || 'There';
+    const firstName = document.getElementById('mName').value.trim().split(' ')[0] || 'There';
     document.getElementById('thankYouName').textContent = `Thank You, ${firstName}!`;
     quoteForm.style.display = 'none';
     thankYouDiv.classList.add('show');
   });
 
-  // Hero inline form
-  document.getElementById('heroForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    openModal();
-  });
+  document.getElementById('heroForm').addEventListener('submit', e => { e.preventDefault(); openModal(); });
 
-  /* ---- FAQ Accordion ---- */
   document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
       const item = btn.closest('.faq-item');
       const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(i => {
-        i.classList.remove('open');
-        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-      });
-      if (!isOpen) {
-        item.classList.add('open');
-        btn.setAttribute('aria-expanded', 'true');
-      }
+      document.querySelectorAll('.faq-item.open').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-question').setAttribute('aria-expanded','false'); });
+      if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
     });
   });
 
-  /* ---- Animated Counters ---- */
-  function animateCounter(el) {
-    const target = parseInt(el.dataset.target);
-    const suffix = el.dataset.suffix || '';
-    const duration = 1800;
-    const step = 16;
-    const steps = Math.ceil(duration / step);
-    let current = 0;
-    const inc = target / steps;
-    const timer = setInterval(() => {
-      current = Math.min(current + inc, target);
-      el.textContent = Math.floor(current) + suffix;
-      if (current >= target) clearInterval(timer);
-    }, step);
-  }
-
-  const counters = document.querySelectorAll('.counter');
-  const counterObserver = new IntersectionObserver((entries) => {
+  const counterObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateCounter(entry.target);
-        counterObserver.unobserve(entry.target);
-      }
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.dataset.target);
+      const suffix = el.dataset.suffix || '';
+      if (target === 0) { el.textContent = '0' + suffix; counterObserver.unobserve(el); return; }
+      let current = 0;
+      const steps = Math.ceil(1800 / 16);
+      const inc = target / steps;
+      const timer = setInterval(() => {
+        current = Math.min(current + inc, target);
+        el.textContent = Math.floor(current) + suffix;
+        if (current >= target) clearInterval(timer);
+      }, 16);
+      counterObserver.unobserve(el);
     });
   }, { threshold: 0.4 });
-  counters.forEach(c => counterObserver.observe(c));
+  document.querySelectorAll('.counter').forEach(c => counterObserver.observe(c));
 
-  /* ---- Service Estimator Quiz ---- */
-  const quizSteps = document.querySelectorAll('.quiz-step');
-  const quizResult = document.getElementById('quizResult');
-  const quizProgress = document.getElementById('quizProgress');
-  const dots = quizProgress.querySelectorAll('.quiz-dot');
   let answers = {};
-  let currentStep = 1;
-
+  const dots = document.querySelectorAll('.quiz-dot');
   const recommendations = {
-    overgrown: { title: 'Lawn Mowing', desc: 'Regular mowing keeps your lawn healthy and looking sharp. We recommend a weekly or bi-weekly schedule based on your lot size.' },
-    weeds: { title: 'Fertilization & Weed Control', desc: 'A targeted weed control program combined with proper fertilization will clear your lawn and keep it thick enough to choke new weeds out.' },
-    thin: { title: 'Aeration & Overseeding', desc: 'Core aeration breaks up compacted soil and overseeding fills in bare spots — together they\'re the most effective way to thicken a struggling lawn.' },
-    curb: { title: 'Full Lawn Care Program', desc: 'For maximum curb appeal, our full-service program covers mowing, edging, fertilization, and seasonal cleanups — everything in one plan.' },
+    dead:     { title: 'Tree Removal', desc: 'A dead or dying tree poses a serious safety hazard. We\'ll assess the risk level and schedule removal quickly.' },
+    overgrown:{ title: 'Tree Trimming & Pruning', desc: 'Crown cleaning and structural pruning will improve your tree\'s shape, health, and safety.' },
+    storm:    { title: 'Emergency Tree Service', desc: 'Storm-damaged trees can fail at any time. Call us immediately at (615) 555-0100 for 24/7 emergency response.' },
+    stump:    { title: 'Stump Grinding', desc: 'Stump grinding removes the stump and surface roots cleanly, frees up the spot for replanting or hardscaping.' },
   };
 
   document.querySelectorAll('.quiz-option').forEach(btn => {
@@ -1936,20 +813,18 @@
       btn.classList.add('selected');
       const stepNum = parseInt(step.dataset.step);
       answers[stepNum] = btn.dataset.value;
-
       setTimeout(() => {
         if (stepNum < 3) {
           step.classList.remove('active');
-          document.querySelector(`.quiz-step[data-step="${stepNum + 1}"]`).classList.add('active');
-          dots.forEach((d, i) => d.classList.toggle('active', i <= stepNum));
-          currentStep = stepNum + 1;
+          document.querySelector(`.quiz-step[data-step="${stepNum+1}"]`).classList.add('active');
+          dots.forEach((d,i) => d.classList.toggle('active', i <= stepNum));
         } else {
           step.classList.remove('active');
           dots.forEach(d => d.classList.add('active'));
-          const rec = recommendations[answers[1]] || recommendations.curb;
-          document.getElementById('quizResultTitle').textContent = `We Recommend: ${rec.title}`;
+          const rec = recommendations[answers[1]] || recommendations.dead;
+          document.getElementById('quizResultTitle').textContent = 'We Recommend: ' + rec.title;
           document.getElementById('quizResultDesc').textContent = rec.desc;
-          quizResult.classList.add('show');
+          document.getElementById('quizResult').classList.add('show');
         }
       }, 200);
     });
@@ -1957,14 +832,12 @@
 
   document.getElementById('quizRestart').addEventListener('click', () => {
     answers = {};
-    currentStep = 1;
-    quizResult.classList.remove('show');
+    document.getElementById('quizResult').classList.remove('show');
     document.querySelectorAll('.quiz-option').forEach(b => b.classList.remove('selected'));
-    quizSteps.forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
     document.querySelector('.quiz-step[data-step="1"]').classList.add('active');
-    dots.forEach((d, i) => d.classList.toggle('active', i === 0));
+    dots.forEach((d,i) => d.classList.toggle('active', i === 0));
   });
 </script>
-
 </body>
 </html>
